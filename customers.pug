@@ -1,0 +1,10 @@
+extends templates/layout
+
+block main 
+    main 
+        h2 All Customers
+
+            each customer in customersList
+                +customer(customer.name, customer.company, customer.phone, customer.email, customer.country, customer.status)
+
+    include ./includes/pagination

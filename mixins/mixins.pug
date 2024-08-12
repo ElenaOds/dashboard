@@ -1,0 +1,13 @@
+mixin pagination(page)
+  li.pagination__item
+    a(href="#") #{page}
+
+
+mixin customer(name, company, phone, email, country, status)
+  .customer
+    p.customer__name #{name}
+    p.customer__company #{company}
+    p.customer__phone #{phone}
+    p.customer__email #{email}
+    p.customer__country #{country}
+    p.customer__status #{status}
