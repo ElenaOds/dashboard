@@ -1,2 +1,25 @@
 
-<p>Hello Evano,</p>
+<div class="container"> 
+  <div class="container__wrapper">
+    <p class="container__text">Hello Evano</p><img class="container__image" src="../images/hand.webp"/><span class="container__text">,</span>
+  </div>
+  <button class="menu-toggle js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="open mobile menu button">
+    <svg class="container__icon" aria-label="burger button icon">
+      <use href="../images/sprite.svg#icon-burger"></use>
+    </svg>
+  </button>
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="close mobile menu button">
+      <svg class="container__icon" aria-label="burger button icon">
+        <use href="../images/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <nav class="menu-nav js-mobile-menu">
+      <ul> 
+        <li> <a href="index.html">Dashboard</a></li>
+        <li> <a href="product.html">Product</a></li>
+        <li> <a href="customers.html">Customers</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

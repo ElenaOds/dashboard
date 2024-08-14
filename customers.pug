@@ -2,9 +2,23 @@ extends templates/layout
 
 block main 
     main 
-        h2 All Customers
+        section.customers
+            h2 All Customers
+            p.customers__text Active Members
 
-            each customer in customersList
-                +customer(customer.name, customer.company, customer.phone, customer.email, customer.country, customer.status)
-
-    include ./includes/pagination
+            table.table
+                thead
+                    tr.table__headrow
+                        th.table__head Customer Name
+                        th.table__head Company
+                        th.table__head Phone Number
+                        th.table__head Email
+                        th.table__head Country
+                        th.table__head Statu
+                tbody
+                    each customer in customersList
+                        +customer(customer.name, customer.company, customer.phone, customer.email, customer.country, customer.status)
+            .pagination 
+                p.pagination__text Showing data 1 to 8 of  256K entries
+                include ./includes/pagination
+          

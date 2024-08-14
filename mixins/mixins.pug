@@ -1,13 +1,17 @@
+mixin customer(name, company, phone, email, country, status)
+    tr.table__row
+      td.table__data #{name}
+      td.table__data #{company}
+      td.table__data #{phone}
+      td.table__data #{email}
+      td.table__data #{country}
+      td.table__data
+        span.table__status.active #{status}
+
 mixin pagination(page)
   li.pagination__item
-    a(href="#") #{page}
+    a.pagination__link(href=`?page=${page}` class=(currentPage === page ? 'active-page' : '')) #{page}
 
-
-mixin customer(name, company, phone, email, country, status)
-  .customer
-    p.customer__name #{name}
-    p.customer__company #{company}
-    p.customer__phone #{phone}
-    p.customer__email #{email}
-    p.customer__country #{country}
-    p.customer__status #{status}
+mixin pagination(page)
+  li.pagination__item
+    a.pagination__link(href="#") #{page}
