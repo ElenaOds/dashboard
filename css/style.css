@@ -110,7 +110,7 @@ p {
 
 .navbar__item {
   padding: 11px 8px 11px 11px;
-  border-radius: 8px;
+  border-radius: 8px; 
 }
 
 .navbar__item:hover {
@@ -120,10 +120,12 @@ p {
 .navbar__item:hover .navbar__icon {
   stroke: var(--secondary-bg-color); 
   fill: var(--secondary-bg-color);
+  transform: rotate(360deg);
 }
 
 .navbar__item:hover .navbar__text  {
   color: var(--secondary-bg-color); 
+  transform: rotate(360deg);
 }
 
 .navbar__item.current {
@@ -138,7 +140,6 @@ p {
 .navbar__item.current .navbar__text {
   color: var(--secondary-bg-color); 
 }
-
 
 
 .navbar__link {
@@ -158,11 +159,13 @@ p {
   height: 24px;
   stroke: var(--nav-color); 
   fill: var(--nav-color);
+  transition: transform 0.5s ease;
 }
 
 .navbar__text {
   font-size: 14px;
   color: var(--nav-color);
+  transition: transform 0.5s ease;
 }
 
 .account {
@@ -351,7 +354,6 @@ h2 {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-
 }
 
 .table__status {
@@ -431,6 +433,7 @@ h2 {
   background-color: #F5F5F5;
   border-radius: 4px;
   border: 1px solid #EEEEEE;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     padding: 5px 8px;
@@ -450,6 +453,10 @@ h2 {
 .pagination__item:nth-child(2) {
   background-color: var(--active-bg-color);
   border: 1px solid var(--active-bg-color);
+}
+
+.pagination__item:hover {
+  background-color: rgb(22 192 152 / .38)
 }
 
 .pagination__link {
@@ -488,7 +495,7 @@ h2 {
   height: 24px;
   display: block;
 }
-/* 
+
 .menu-container {
   position: fixed;
   display: flex;
@@ -497,33 +504,48 @@ h2 {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #f00;
+  background-color: var(--bg-color);
   z-index: 10;
-
   transform: translateX(100%);
-
-
 }
 
-.menu-container .is-open {
+.menu-container.is-open {
     transform: translateX(0);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-container .menu-toggle {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  stroke: #000;
+  top: 24px;
+  right: 24px;
+  stroke: var(--nav-color);
 }
-.menu-nav {
+
+.menu-nav__list {
+    padding: 120px 40px;
+}
+
+.menu-nav__list {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  justify-content: center;
+}
+
+.menu-nav__icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--nav-color); 
+  fill: var(--nav-color);
+}
+
+.menu-nav__link {
+  display: flex;
   align-items: center;
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  right: 20%;
-} */
+  justify-content: start;
+  gap: 8px;
+}
+
+.menu-nav__text {
+  font-size: 14px;
+  color: var(--nav-color);
+}
