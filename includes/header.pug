@@ -1,46 +1,46 @@
 div.container 
     div.container__wrapper
         p.container__text Hello Evano
-        img.container__image(src="../images/hand.webp")
+        img.container__image(src="images/hand.webp")
         span.container__text ,
     button.menu-toggle.js-open-menu(type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="open mobile menu button")
         svg.container__icon(aria-label="burger button icon")
-            use(href="../images/sprite.svg#icon-burger")
+            use(href="images/sprite.svg#icon-burger")
     div.menu-container.js-menu-container#mobile-menu
         button.menu-toggle.js-close-menu(type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="close mobile menu button")
             svg.container__icon(aria-label="burger button icon")
-                use(href="../images/sprite.svg#icon-close")
+                use(href="images/sprite.svg#icon-close")
 
         nav.menu-nav.js-mobile-menu
             ul.menu-nav__list 
                 li.menu-nav__item#dashboard-link
                     a.menu-nav__link(href="index.html" aria-label="link to dashboard page") 
                         svg.menu-nav__icon(style={fill: "none"} aria-label="dashboard icon")
-                            use(href="../images/sprite.svg#icon-dashboard")
+                            use(href="images/sprite.svg#icon-dashboard")
                         span.menu-nav__text Dashboard  
                 li.menu-nav__item#product-link
                     a.menu-nav__link(href="product.html" aria-label="link to product page")
                         svg.menu-nav__icon(style={stroke: "none"} aria-label="product icon")
-                            use(href="../images/sprite.svg#icon-product")
+                            use(href="images/sprite.svg#icon-product")
                         span.menu-nav__text Product
                 li.menu-nav__item#customer-link
                     a.menu-nav__link(href="customers.html" aria-label="link to customers page")
                         svg.menu-nav__icon(style={fill: "none"} aria-label="customer icon")
-                             use(href="../images/sprite.svg#icon-customer")
+                             use(href="images/sprite.svg#icon-customer")
                         span.menu-nav__text Customers
                 li.menu-nav__item#income-link
                     a.menu-nav__link(href="income.html" aria-label="link to income page")
                         svg.menu-nav__icon(style={fill: "none"} aria-label="income icon")
-                            use(href="../images/sprite.svg#icon-income")
+                            use(href="images/sprite.svg#icon-income")
                         span.menu-nav__text Income
                 li.menu-nav__item#promote-link
                     a.menu-nav__link(href="promote.html" aria-label="link to promote page")
                         svg.menu-nav__icon(style={stroke: "none"} aria-label="promote icon")
-                            use(href="../images/sprite.svg#icon-promote")
+                            use(href="images/sprite.svg#icon-promote")
                         span.menu-nav__text Promote
                 li.menu-nav__item#help-link
                     a.menu-nav__link(href="help.html" aria-label="link to help page")
                         svg.menu-nav__icon(style={stroke: "none"} aria-label="help icon")
-                            use(href="../images/sprite.svg#icon-help")
+                            use(href="images/sprite.svg#icon-help")
                         span.menu-nav__text Help 
         
